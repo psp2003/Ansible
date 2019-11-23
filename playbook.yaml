@@ -1,7 +1,7 @@
 ---
-- hosts: node
+- hosts: all
 
   roles:
-    - docker-role
-    - web-app-role
-    - nginx-role
+    - docker
+    - webapp
+#    - nginx-role
