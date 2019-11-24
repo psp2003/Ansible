@@ -2,11 +2,7 @@
 - hosts: node
   tasks:
   - name: Check that a web server based in docker container returns a status 200
-#    uri:
-#      url: http://192.168.182.3:81/
-#      return_content: yes
-#    register: this
-#    failed_when: "'AWESOME' not in this.content"
     shell: "curl 192.168.182.3:81"
+#    shell: "curl -Is 192.168.182.3:81 | head -1" HTTP 200 OK ONLY
     register: result
   - debug: var=result
