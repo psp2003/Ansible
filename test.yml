@@ -9,7 +9,7 @@
 #    failed_when: "'AWESOME' not in this.content"
   - name: Check that a web server based in docker container returns a status 200
     uri:
-      url: '192.168.182.3:81'
+      url: http://192.168.182.3:81/
       return_content: yes
     register: this
     failed_when: "'AWESOME' not in this.content"
