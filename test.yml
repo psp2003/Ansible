@@ -1,11 +1,17 @@
 ---
 - hosts: node
   tasks:
+#  - name: Check that a web server based in docker container returns a status 200
+#    uri:
+#      url: 192.168.182.3:81
+#      return_content: yes
+#      register: this
+#    failed_when: "'AWESOME' not in this.content"
   - name: Check that a web server based in docker container returns a status 200
     uri:
-      url: 192.168.182.3:81
+      url: '192.168.182.3:81'
       return_content: yes
-      register: this
+    register: this
     failed_when: "'AWESOME' not in this.content"
 #    shell: 'curl -Is 192.168.182.3:81 | head -1'
 #    register: result
