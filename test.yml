@@ -4,7 +4,7 @@
     result:
   tasks:
   - name: Check that a web server based in docker container returns a status 200
-    shell: 'curl 0.0.0.0:20'
+    shell: 'curl 0.0.0.0:81'
 #    register: result
 #  - debug: var=result
 #  - name: Output of the result
