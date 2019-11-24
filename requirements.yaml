@@ -1,0 +1,6 @@
+- src: https://github.com/psp2003/ansible-docker-install
+  name: docker-role
+- src: https://github.com/psp2003/webapp
+  name: web-app-role
+- src: https://github.com/psp2003/ngnix
+  name: nginx-role
