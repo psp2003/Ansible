@@ -10,7 +10,7 @@ pipeline {
         sh """
            mkdir -p roles
            ansible-galaxy install -p roles -r requirements.yaml
-           ansible-playbook -i inventory playbook.yml --vault-password-file /home/jenkins/vault_pass.txt
+           ansible-playbook -i inventory playbook.yaml --vault-password-file /home/jenkins/vault_pass.txt
            """
            }
       }
