@@ -10,4 +10,3 @@
     shell: "echo $(curl -Is 192.168.182.3:81 | head -1) "
     register: result
   - debug: var=result
-  - name: Output of the result
