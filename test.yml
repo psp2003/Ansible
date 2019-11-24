@@ -1,7 +1,7 @@
 ---
 - hosts: node
   tasks:
-#  - name: Check that a web server based in docker container returns a status 200
+  - name: Check that a web server based in docker container returns a status 200
 #    uri:
 #      url: http://192.168.182.3:81/
 #      return_content: yes
