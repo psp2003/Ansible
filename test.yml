@@ -8,7 +8,6 @@
 #    register: this
 #    failed_when: "'AWESOME' not in this.content"
     shell: "echo $(curl -Is 192.168.182.3:81 | head -1) "
-#    register: result
-#  - debug: var=result
-#  - name: Output of the result
-#    shell: "sleep 5"
+    register: result
+  - debug: var=result
+  - name: Output of the result
