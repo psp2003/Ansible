@@ -1,0 +1,11 @@
+---
+- hosts: node
+  vars:
+    result:
+  tasks:
+  - name: Check that a web server based in docker container returns a status 200
+    shell: /etc/ansible/test.sh
+    register: result
+  - debug: var=result
+  - name: Output of the result
+    shell: "sleep 5"
